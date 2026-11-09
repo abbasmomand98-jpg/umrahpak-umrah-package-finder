@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UmrahPak — Umrah Package Finder &amp; Scam Checker (UX Concept)</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand"><span class="logo">U</span> UmrahPak</div>
+  <p class="tagline">The journey of a lifetime. Without the fraud. — Umrah package finder &amp; scam checker for Pakistan</p>
+  <p class="sample-note">SAMPLE DATA — every package, licence number, agent and figure shown here is invented for this UX concept demo. No real agent, licence number, or person appears. UmrahPak is an unofficial concept, not a travel agency: always confirm prices, visa terms, hotel distances and licence status with the agent and the relevant authorities before paying anyone anything.</p>
+</header>
+
+<main>
+  <!-- Package comparator -->
+  <section class="card">
+    <p class="eyebrow">PACKAGE COMPARE</p>
+    <h2>Same 14 days. Three very different trips.</h2>
+    <p class="hint">Three 14-day Umrah packages, per person, in Pakistan. The cheapest package is not the best value — a verified agent with the visa included and a hotel near Haram is.</p>
+    <div class="verify-row">
+      <label>Search packages
+        <input id="search-input" type="text" value="" placeholder="Agent or city — try Noor or Lahore" spellcheck="false">
+      </label>
+      <label>City
+        <select id="city-select">
+          <option>All cities</option>
+          <option>Lahore</option>
+          <option>Karachi</option>
+          <option>Islamabad</option>
+          <option>Peshawar</option>
+          <option>Rawalpindi</option>
+          <option>Quetta</option>
+        </select>
+      </label>
+      <label class="checkbox"><input id="verified-only" type="checkbox"> Verified agents only</label>
+    </div>
+    <div id="package-list"></div>
+    <p id="package-summary"></p>
+  </section>
+
+  <!-- Family cost calculator -->
+  <section class="card">
+    <p class="eyebrow">FAMILY COST CALCULATOR</p>
+    <h2>What will Umrah cost your family?</h2>
+    <p class="hint">Pick a package and the number of travellers. UmrahPak works out the family total — and shows the hidden costs a cheap quote leaves out.</p>
+    <div class="verify-row">
+      <label>Travellers
+        <input id="travellers-input" type="number" min="1" max="20" step="1" value="4">
+      </label>
+      <label>Package
+        <select id="package-select">
+          <option value="noor">Noor Travels, Lahore — Rs 285,000</option>
+          <option value="rehman">Rehman Tours, Karachi — Rs 340,000</option>
+          <option value="sasta">Sasta Umrah Deals — Rs 195,000</option>
+        </select>
+      </label>
+    </div>
+    <p class="hint">Try: 4 travellers on Noor Travels — Rs 11,40,000 total. Then switch to Sasta Umrah Deals and watch the hidden costs appear.</p>
+    <div id="family-result"></div>
+  </section>
+
+  <!-- Agent licence checker -->
+  <section class="card">
+    <p class="eyebrow">AGENT LICENCE CHECKER</p>
+    <h2>Is this agent licensed — or fake?</h2>
+    <p class="hint">Check an agent's licence number before you pay. A licensed agent is in the register; a fake one is not.</p>
+    <div class="verify-row">
+      <label>Agent licence number
+        <input id="licence-input" type="text" value="UMT-2026-4812" spellcheck="false">
+      </label>
+      <button id="licence-btn">Verify licence</button>
+    </div>
+    <p class="hint">Try: UMT-2026-4812 (verified — Noor Travels, 12 years, 4,800 pilgrims served), UMT-2026-077 (fraud warning).</p>
+    <div id="licence-result"></div>
+  </section>
+
+  <!-- Departure countdown -->
+  <section class="card">
+    <p class="eyebrow">DEPARTURE COUNTDOWN</p>
+    <h2>How many days until you fly?</h2>
+    <p class="hint">Your sample departure is 15 Dec 2026 — count down to it, and keep the visa, hotel and transport status in one place.</p>
+    <div id="countdown-result"></div>
+  </section>
+
+  <!-- Departure checklist -->
+  <section class="card">
+    <p class="eyebrow">BEFORE YOU PAY</p>
+    <h2>Your departure checklist</h2>
+    <p class="hint">Tick each safety check off before paying an agent — your checklist is saved on this device.</p>
+    <p id="checklist-progress"></p>
+    <ul id="checklist"></ul>
+  </section>
+
+  <!-- Scam spotter -->
+  <section class="card">
+    <p class="eyebrow">SCAM SPOTTER</p>
+    <h2>Eight ways an Umrah agent can cheat you</h2>
+    <p class="hint">If any of these shows up, stop and verify the agent yourself — before paying anyone anything.</p>
+    <ul id="red-flags" class="flags-list"></ul>
+  </section>
+
+  <button id="reset-demo" class="secondary">Reset demo data</button>
+</main>
+
+<footer>
+  <p>UmrahPak is an unofficial UX concept by Muhammad Abbas Khan — not a real travel agency.</p>
+  <p>Available for new projects: abbasmomand98@gmail.com</p>
+</footer>
+
+<script src="data.js"></script>
+<script src="logic.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
